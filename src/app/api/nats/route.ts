@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { NatsService } from "../../../pubsub/nats";
 import { createAppJwt } from "../../../pubsub/userJwt";
-import nodemailer from "nodemailer";
-import { alertModel } from "@/db/models/alerts";
-import { dbConnect } from "@/db/dbConnect";
 
 export const dynamic = "force-dynamic";
 

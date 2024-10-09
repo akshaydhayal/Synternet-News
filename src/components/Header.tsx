@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 //@ts-expect-error Function
 const Header = ({ setNewsItems }) => {
   const [isConnected, setIsConnected] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   const eventSourceRef = useRef(null);
 
@@ -30,6 +30,7 @@ const Header = ({ setNewsItems }) => {
         try {
           const data = JSON.parse(event.data);
           setNewsItems(data);
+          {/* @ts-expect-error ignore */}
           setLastUpdated(new Date().toLocaleString());
         } catch (error) {
           console.error("Error parsing event data:", error);
