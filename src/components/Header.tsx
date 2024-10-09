@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 // import { FaBell } from "react-icons/fa";
+import { Loader2 } from "lucide-react";
 
 //@ts-expect-error Function
 const Header = ({ setNewsItems }) => {
@@ -75,9 +76,16 @@ const Header = ({ setNewsItems }) => {
           </div>
           <div className="text-center md:text-right">
             <div className="flex items-center gap-4">
-              <p className={`text-base font-medium ${isConnected ? "text-green-400" : "text-red-400"}`}>
-                {isConnected ? "● Connected to live updates" : "○ Connecting to server..."}
+              {/* <p className={`text-base font-medium ${isConnected ? "text-green-400" : "text-red-400"}`}> */}
+              <p className={`text-base font-medium text-green-400`}>
+                {/* {isConnected ? "● Connected to live updates" : "○ Connecting to server..."} */}
+                {isConnected ? "● Fetched Live News updates" : 
+                <div className="flex items-center gap-3">
+                    ○ Fetching Live News
+                    <Loader2 className="h-8 w-8 text-green-400 animate-spin" />
+                </div>}
               </p>
+              {/* <Loader2 className="h-8 w-8 text-green-400 animate-spin mb-4" /> */}
               {lastUpdated && <p className="text-base text-gray-400 ">Last updated at: {lastUpdated}</p>}
             </div>
           </div>
