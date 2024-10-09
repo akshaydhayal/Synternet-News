@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Synternet Live News Hedalines
 
-## Getting Started
+Live Project Link: [https://synternet-news.vercel.app/](https://synternet-news.vercel.app/)
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The Live News Feed is a dynamic web application that fetches and displays real-time news articles from RSS feeds, leveraging Synternet for live data streaming. News items are published to Synternet data streams at regular 30-second intervals from a EC2 Server, ensuring users receive the latest news in real time. The app subscribes to these data streams, updates the content as new items are published, and presents them in an easy-to-read, card-based layout. The UI is designed for efficiency, with skeleton loaders shown during data retrieval, ensuring a smooth user experience even when live data is temporarily unavailable.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Live News Publishing**: Live Headlines from a RSS Feed are published every 30 seconds through a EC2 Server, providing real-time updates.
+- **Client Subscribes to Synternet Stream:**: Utilizes Synternet to subscribe to live news data streams.
+- **Real-Time Updates:**: The app dynamically updates the feed without needing a page reload, offering a continuous flow of news as it is published to the data stream.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Website Demo
 
-## Learn More
+![Mission Dashboard](https://github.com/akshaydhayal/Synternet-News/blob/main/Create-Next-App.png)
 
-To learn more about Next.js, take a look at the following resources:
+*Figure 1: Live News Headlines Page*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Video Demo:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+
+- **Frontend**: Next.js, React,  Tailwind CSS, Lucide Icons
+- **Live streams**: Synternet, EC2 Server
+  
+## Synternet Streams Used
+
+- **Published Stream**: stark.news.live
+- **Subscribed streams**: stark.news.live
