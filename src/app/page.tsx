@@ -18,7 +18,7 @@ const LiveNewsFeed = () => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[...Array(6)].map((_, index) => (
               <Card key={index} className="bg-gray-800 border-gray-700 overflow-hidden">
-                <Skeleton className="h-48 w-full" />
+                <Skeleton className="h-40 w-full" />
                 <CardHeader>
                   <Skeleton className="h-6 w-3/4" />
                 </CardHeader>
@@ -33,14 +33,14 @@ const LiveNewsFeed = () => {
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {newsItems.map((item, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                {item.image && <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />}
-                <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-100">{item.title}</CardTitle>
+              <Card key={index} className=" bg-gray-800 border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                {item.image && <img src={item.image} alt={item.title} className="w-full h-40 object-cover" />}
+                <CardHeader className="p-2 px-6">
+                  <CardTitle className="text-lg font-semibold text-gray-100">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300 mb-4 line-clamp-3">{item.description}</p>
-                  <div className="flex justify-between items-center text-xs text-gray-400">
+                <CardContent className="py-0">
+                  <p className="text-sm text-gray-300 mb-2 line-clamp-5">{item.description}</p>
+                  <div className="flex justify-between items-center text-sm text-gray-400">
                     <p>Source: {item.creator}</p>
                     <p>{new Date(item.pubDate).toLocaleString()}</p>
                   </div>
