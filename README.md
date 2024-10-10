@@ -1,4 +1,4 @@
-# Synternet Live News Hedalines
+# Synternet Live News Headlines
 
 Live Project Link: [https://synternet-news.vercel.app/](https://synternet-news.vercel.app/)
 
@@ -21,7 +21,7 @@ The Live News Feed is a dynamic web application that fetches and displays real-t
 
 
 ## Video Demo:
-
+https://www.loom.com/share/8295bdcef9a24e74a42a90fbc8c3067e?sid=52934ec4-3654-49c1-9a72-4b1f73b415ef
 
 ## Technologies Used
 
